@@ -8,7 +8,7 @@ const Navbar=()=>{
             <div className="space-x-8 text-md">
                 <Link to='/' className="hover:underline hover:text-white">Home</Link>
                 <Link to='/courses' className="hover:underline hover:text-white">Courses</Link>
-                <Link to='/my Course' className="hover:underline hover:text-white">My Learning</Link>
+                <Link to='/my-learning' className="hover:underline hover:text-white">My Learning</Link>
             </div>
         </nav>
     )

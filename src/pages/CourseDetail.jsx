@@ -1,7 +1,8 @@
-import React,{useState} from "react";
+import React,{useState, useContext} from "react";
 import {useParams} from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
 import mockCourse from "../data/mockCourse";
+import { EnrollContext } from "../context/EnrollContext";
 
 const CourseDetail = () => {
   const {id}= useParams();
@@ -9,11 +10,14 @@ const CourseDetail = () => {
   const course = mockCourse.find(course=> course.id === id);
   const [enrolled,setEnrolled]=useState(false);
 
+  const {courseEnroll}=useContext(EnrollContext);
+
   const handleEnroll=()=>{
     setEnrolled(true);
-  };
+    courseEnroll(course); 
+  }
 
-  const handleBack = () => {
+  const handleBack=() =>{
     navigate(-1);
   };
 
@@ -24,6 +28,7 @@ const CourseDetail = () => {
           <>
             <h2 className="text-3xl font-bold mb-4 text-sky-700">{course.title}</h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-6">{course.details}</p>
+            <p className="text-gray-700 mb-2 text-md"><span className="font-semibold">Instructor:</span> {course.instructor}</p>
             
             <div className="mb-8">
               <h2 className="text-2xl font-semibold mb-3 text-slate-700">Course video</h2>
@@ -39,29 +44,32 @@ const CourseDetail = () => {
 
               </div>
             </div>
+
+            <div className="flex justify-between gap-4 mt-6">
+              <div>
+              <button onClick={handleEnroll}
+              disabled={enrolled}
+              className={`px-6 py-2 rounded-lg text-lg font-semibold ${
+                  enrolled ? 'bg-gray-400 cursor-not-allowed' : 'bg-sky-600 hover:bg-sky-700 text-white'
+                }`}> 
+                {enrolled? 'Enrolled':'Enroll Now'}</button>
+                
+                {enrolled && (
+                <p className="text-green-600 mt-2 font-medium">You are enrolled in this course!</p>
+              )}
+              </div>
+
+              <div>
+              <button onClick={handleBack}
+              className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg text-lg font-semibold">Back</button>
+              </div>
+            </div>
+                
           </>
         ) : (
-          <p className="text-teal-500 text-lg font-semibold">Course not found.</p>
+          <p className="text-teal-500 text-lg font-semibold">No Courses Found</p>
         )
       }
-
-      {!enrolled ?(
-        <div className="flex justify-between gap-4 mt-6">
-        <button
-          onClick={handleEnroll}
-          className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg text-lg font-semibold"
-        >Enroll Now</button>
-
-        <button
-            onClick={handleBack}
-            className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg text-lg font-semibold"
-          >Back</button>
-          </div>
-        
-      ):(
-        <p className="text-emerald-600 text-xl font-medium mt-4">You are enrolled in this course!</p>
-      )}
-
     </div>
   );
 };
