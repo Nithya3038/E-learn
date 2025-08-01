@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useEffect} from 'react';
 import CourseCard from '../components/CourseCard';
 import mockCourse from '../data/mockCourse';
 
@@ -34,8 +34,8 @@ const Course=()=>{
               
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
            {filteredCourses.length > 0 ? (
-            filteredCourses.map((course)=>(
-            <CourseCard key={course.id} course={course}/>
+            filteredCourses.map((props)=>(
+            <CourseCard key={props.id} course={props}/>
           ))
         ) : (
           <p className="text-center col-span-full text-gray-500 text-lg">No courses found</p>

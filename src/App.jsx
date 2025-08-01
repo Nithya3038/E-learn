@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Course from './pages/Course';
 import CourseDetail from './pages/CourseDetail';
-// import MyLearning from './pages/MyLearning';
+import MyLearning from './pages/MyLearning';
 import {EnrollProvider} from './context/EnrollContext';
 
 
@@ -17,7 +17,7 @@ const App=()=>{
                     <Route path='/' element={<Home/>}/>
                     <Route path='/courses' element={<Course />}/>
                     <Route path='/Course/:id' element={<CourseDetail/>}/>
-                    {/* <Route path='/my-learning' element={<MyLearning/>}/> */}
+                    <Route path='/my-learning' element={<MyLearning/>}/>
                 </Routes>
             </Router>
             </EnrollProvider>
