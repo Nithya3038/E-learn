@@ -2,14 +2,10 @@ import React, {useState, createContext, useEffect} from 'react';
 
 export const EnrollContext= createContext();
 export const EnrollProvider= ({children})=>{
-    const [enrolledCourses, setEnrolledCourses]=useState([]);
-
-    useEffect(() => {
+    const [enrolledCourses, setEnrolledCourses] = useState(() => {
     const storedCourses = localStorage.getItem('enrolledCourses');
-    if (storedCourses) {
-      setEnrolledCourses(JSON.parse(storedCourses));
-    }
-  }, []);
+    return storedCourses ? JSON.parse(storedCourses) : [];
+  });
 
   useEffect(() => {
     localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));

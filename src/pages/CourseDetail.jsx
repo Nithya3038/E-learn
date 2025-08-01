@@ -38,7 +38,7 @@ const CourseDetail = () => {
               {isEnrolled?(
                 <iframe
                 className="w-full h-96 rounded-lg shadow-md border"
-                src={course.videoURL}
+                src={`${course.videoURL}?rel=0&modestbranding=1&showinfo=0&controls=1&disablekb=1`}
                 title={course.title}
                 allowFullScreen
                 />
@@ -60,7 +60,15 @@ const CourseDetail = () => {
 
             <div className="flex justify-between gap-4 mt-6">
               <div>
-              <button onClick={handleEnroll}
+              <button 
+              onClick={()=>{
+                if (!isEnrolled){
+                  const confirmEnroll=window.confirm("Do you want to enroll in this course?");
+                  if(confirmEnroll){
+                    handleEnroll();
+                  }
+                }
+              }}
               disabled={isEnrolled}
               className={`px-6 py-2 rounded-lg text-lg font-semibold ${
                   isEnrolled ? 'bg-gray-400 cursor-not-allowed' : 'bg-sky-600 hover:bg-sky-700 text-white'
