@@ -7,6 +7,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/SqcY0GlETPk",
     instructor: "Jane Doe",
     thumbnail: "https://img.youtube.com/vi/SqcY0GlETPk/hqdefault.jpg",
+    category : "Frontend",
     progress: 70,
     completed: false
   },
@@ -18,6 +19,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/W6NZfCO5SIk",
     instructor: "John Smith",
     thumbnail: "https://img.youtube.com/vi/W6NZfCO5SIk/hqdefault.jpg",
+    category : "Frontend",
     progress: 80,
     completed: false
   },
@@ -29,6 +31,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/6biMWgD6_JY",
     instructor: "Emily Zhang",
     thumbnail: "https://img.youtube.com/vi/6biMWgD6_JY/hqdefault.jpg",
+    category : "Frontend",
     progress: 100,
     completed: true
   },
@@ -40,6 +43,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/TlB_eWDSMt4",
     instructor: "Raj Patel",
     thumbnail: "https://img.youtube.com/vi/TlB_eWDSMt4/hqdefault.jpg",
+    category : "Backend",
     progress: 0,
     completed: false
   },
@@ -51,6 +55,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/-MTSQjw5DrM",
     instructor: "Sarah Lee",
     thumbnail: "https://img.youtube.com/vi/-MTSQjw5DrM/hqdefault.jpg",
+    category : "Backend",
     progress: 20,
     completed: false
   },
@@ -60,6 +65,7 @@ const mockCourse = [
     description: "NoSQL database fundamentals.",
     details: "Learn CRUD operations, schema design, and data modeling in MongoDB.",
     videoURL: "https://www.youtube.com/embed/c2M-rlkkT5o",
+    category : "Database",
     instructor: "Ahmed Khan",
     thumbnail: "https://img.youtube.com/vi/c2M-rlkkT5o/hqdefault.jpg",
     progress: 60,
@@ -73,6 +79,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/UB1O30fR-EE&t=28s",
     instructor: "Nina Patel",
     thumbnail: "https://img.youtube.com/vi/UB1O30fR-EE/hqdefault.jpg",
+    category : "Frontend",
     progress: 100,
     completed: true
   },
@@ -84,6 +91,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/R9I85RhI7Cg",
     instructor: "Tom Gregory",
     thumbnail: "https://img.youtube.com/vi/R9I85RhI7Cg/hqdefault.jpg",
+    category : "Frontend",
     progress: 35,
     completed: false
   },
@@ -95,6 +103,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/S7XpTAnSDL4",
     instructor: "Anna Lee",
     thumbnail: "https://img.youtube.com/vi/S7XpTAnSDL4/hqdefault.jpg",
+    category : "Tools",
     progress: 55,
     completed: false
   },
@@ -106,6 +115,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/ahCwqrYpIuM",
     instructor: "Chris Miller",
     thumbnail: "https://img.youtube.com/vi/ahCwqrYpIuM/hqdefault.jpg",
+    category : "Frontend",
     progress: 0,
     completed: false
   },
@@ -117,6 +127,7 @@ const mockCourse = [
     videoURL: "https://www.youtube.com/embed/943D7U74_sQ",
     instructor: "Monica Green",
     thumbnail: "https://img.youtube.com/vi/943D7U74_sQ/hqdefault.jpg",
+    category : "Frontend",
     progress: 10,
     completed: false
   },
@@ -128,6 +139,7 @@ const mockCourse = [
     videoURL:"https://www.youtube.com/embed/1rP_yHj2dqg",
     instructor: "Samuel Osei",
     thumbnail: "https://img.youtube.com/vi/1rP_yHj2dqg/hqdefault.jpg",
+    category : "Frontend",
     progress: 25,
     completed: false
   },
@@ -139,6 +151,7 @@ const mockCourse = [
     videoURL:"https://www.youtube.com/embed/9kRgVxULbag&t=282s",
     instructor: "Linda Jones",
     thumbnail: "https://img.youtube.com/vi/9kRgVxULbag/hqdefault.jpg",
+    category : "Tools",
     progress: 65,
     completed: false
   },
@@ -150,6 +163,7 @@ const mockCourse = [
     videoURL:"https://www.youtube.com/embed/Zq5fmkH0T78",
     instructor: "Kevin Wu",
     thumbnail: "https://img.youtube.com/vi/Zq5fmkH0T78/hqdefault.jpg",
+    category : "Frontend",
     progress: 70,
     completed: false
   },
@@ -161,6 +175,7 @@ const mockCourse = [
     videoURL:"https://www.youtube.com/embed/O3BUHwfHf84",
     instructor: "Alex Rivera",
     thumbnail: "https://img.youtube.com/vi/O3BUHwfHf84/hqdefault.jpg",
+    category : "Full-stack",
     progress: 90,
     completed: false
   }

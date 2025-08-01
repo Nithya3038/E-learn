@@ -21,9 +21,16 @@ const MyLearning=()=>{
                             <h3 className="font-semibold">{course.title}</h3>
                              <p className="text-sm text-gray-600 mb-2">By {course.instructor}</p>
 
+                        <div className="w-full bg-gray-200 h-2 rounded-full">
+                            
+                        <div className="bg-teal-500 h-2 rounded-full"
+                         style={{ width:`${course.progress}%`}}></div>
+
+                        </div>
+                        <p className="text-xs text-gray-500">{course.progress}% completed</p>
+
                             <Link to={`/course/${course.id}`}
                              className="text-xs text-teal-600 underline">Continue</Link>
-                            
                         </div>
                     ))}
                 </div>
