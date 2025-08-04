@@ -24,15 +24,15 @@ const Course=()=>{
   });
 
     return(
-        <div className="p-6 min-h-screen bg-slate-50">
+        <div className="p-6 min-h-screen bg-slate-50 dark:bg-gray-900">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div>
-          <label className="mr-2 font-semibold text-gray-700">Category:</label>
+          <label className="mr-2 font-semibold text-gray-700 dark:text-white">Category:</label>
           <select
             value={category}
             onChange={(e)=>setCategory(e.target.value)}
-            className="px-3 py-1 border rounded shadow-sm text-gray-700">
+            className="px-3 py-1 border rounded shadow-sm text-gray-700 dark:text-white dark:bg-gray-800 dark:border-gray-700">
             
             {categories.map(category => (
               <option key={category} value={category}>{category}</option>))
@@ -46,7 +46,7 @@ const Course=()=>{
               placeholder="Search Courses..."
               value={search}
               onChange={(e)=>setSearch(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-200"/>
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-200 dark:bg-gray-700 dark:border-gray-700 dark:text-white"/>
 
               <button onClick={handleClear}
               className="absolute right-3 top-2 text-gray-500 hover:text-gray-700 text-xl font-bold">x</button>
