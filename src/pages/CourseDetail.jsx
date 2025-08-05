@@ -23,13 +23,14 @@ const CourseDetail = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-xl mt-6">
+    <div className="p-6 min-h-screen bg-slate-50 dark:bg-gray-800">
+    <div className="p-6 max-w-4xl mx-auto bg-white dark:bg-gray-700 shadow-lg rounded-xl mt-6">
       {
         course?(
           <>
-            <h2 className="text-3xl font-bold mb-4 text-sky-700">{course.title}</h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">{course.details}</p>
-            <p className="text-gray-700 mb-2 text-md"><span className="font-semibold">Instructor:</span> {course.instructor}</p>
+            <h2 className="text-3xl font-bold mb-4 text-sky-600 dark:text-sky-300">{course.title}</h2>
+            <p className="text-gray-700 dark:text-gray-100 text-lg leading-relaxed mb-6">{course.details}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-2 text-md"><span className="font-semibold">Instructor:</span> {course.instructor}</p>
             
             <div className="mb-8">
               <h2 className="text-2xl font-semibold mb-3 text-slate-700">Course video</h2>
@@ -76,13 +77,13 @@ const CourseDetail = () => {
                 {isEnrolled? 'Enrolled':'Enroll Now'}</button>
                 
                 {isEnrolled && (
-                <p className="text-green-600 mt-2 font-medium">You are enrolled in this course!</p>
+                <p className="text-green-600 dark:text-green-300 mt-2 font-medium">You are enrolled in this course!</p>
               )}
               </div>
 
               <div>
               <button onClick={handleBack}
-              className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-lg text-lg font-semibold">Back</button>
+              className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 text-white px-6 py-2 rounded-lg text-lg font-semibold">Back</button>
               </div>
             </div>
                 
@@ -91,6 +92,7 @@ const CourseDetail = () => {
           <p className="text-teal-500 text-lg font-semibold">No Courses Found</p>
         )
       }
+    </div>
     </div>
   );
 };
